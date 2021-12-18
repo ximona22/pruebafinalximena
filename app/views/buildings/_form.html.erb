@@ -1,0 +1,28 @@
+<%= form_with(model: [@building], local: true) do |form| %>
+  <% if building.errors.any? %>
+    <div id="error_explanation" class="card-header">
+      <h2><%= pluralize(building.errors.count, "error") %> prohibited
+        this building from being saved:</h2>
+      <ul class="list-inline">
+        <% building.errors.full_messages.each do |message| %>
+          <li class="list-inline-item"><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field mb-3">
+    <%= form.label :nombre ,:class =>"form-label"%>
+    <%= form.text_field :name ,:class =>"form-control"%>
+  </div>
+   <div class="field mb-3">
+    <%= form.label :dirección ,:class =>"form-label"%>
+    <%= form.text_field :address,:class =>"form-control"%>
+  </div>
+  <div class="field mb-3">
+    <%= form.label :ciudad ,:class =>"form-label"%>
+    <%= form.text_field :city,:class =>"form-control"%>
+  </div>
+  <div class="actions text-center">
+    <%= form.submit "Crear Nuevo Edificio" ,:class =>"btn btn-info" %>     
+  </div>
+<% end %>

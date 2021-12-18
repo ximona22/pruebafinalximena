@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Administracion de Edificios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://blog.nubecolectiva.com/wp-content/uploads/2018/08/faviconcc.png">    
+    <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet"> 
+ 
+    <!-- Con estas 2 líneas llamamos a los archivos CSS y Javascript de Bootstrap y demás -->
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+   </head>
+ 
+  <body>
+    <div  class="container-fluid card-header">
+    <!-- Aca renderizamos los elementos dentro del body en la etiqueta  <%= yield %> -->
+    <%= yield %>
+    </div>
+  </body>
+</html>

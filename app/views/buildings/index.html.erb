@@ -1,0 +1,22 @@
+<h1>Edificios</h1>
+<table class="table table-bordered table-hover table-striped table-sm"> 
+ <thead class="table-light">
+    <tr class="table-primary">
+      <th >Nombre de Edificio</th>
+      <th>Direccion</th>
+      <th>Ciudad</th>
+      <th colspan="4">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @buildings.each do |building| %>
+      <tr>
+        <td><%= building.name %></td>
+        <td><%= building.address %></td>
+        <td><%= building.city %></td>
+        <td class="text-center"><%= link_to "Mostrar", building ,:class =>"btn btn-outline-info "%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="text-center"><%= link_to "Agregar Edificio", new_building_path ,:class =>"btn btn-primary"%></div>

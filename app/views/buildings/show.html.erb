@@ -1,0 +1,28 @@
+<h1>Edificio</h1>
+<p>Nombre:</p>
+<%= @building.name %>
+<p>Direccion:</p>
+<%= @building.address %>
+<p>Ciudad:</p>
+<%= @building.city %>
+<h1>Departamento</h1>
+<table class="table table-bordered table-hover table-striped"> 
+ <thead class="table-light">
+    <tr class="table-success">
+      <th>Numero de Departamento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @apartments.each do |apartment| %>
+      <tr>
+        <td><%= apartment.number %></td>
+        <td><%= link_to "Show", apartment %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "Atras", buildings_path %>
+
+
+
